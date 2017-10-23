@@ -24,7 +24,18 @@ $(function() {
   });
   */
   //Animation FadeIn
-  
+
+  $(window).scroll(function() {
+    if ($(".navbar").offset().top > 70) {
+        $(".mainlogo").css('visibility', 'hidden');
+        $(".header_navbar").addClass('header_navbar-scroll');
+      } else {
+        $(".mainlogo").css('visibility', 'visible');
+        $(".header_navbar").removeClass('header_navbar-scroll');
+    }
+  });
+
+  /*
   $(window).scroll(function() {
     $(".animation").each(function(){
       var pos = $(this).offset().top;
@@ -40,7 +51,7 @@ $(function() {
       }
     });
   });
-
+  */
 
 
 
