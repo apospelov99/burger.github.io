@@ -40,26 +40,35 @@
 
 <body>
 	<!-- header -->
-	<div class="container-fluid header">
+	<div id="header" class="container-fluid header">
 		<!-- header_navbar -->
 		<nav class="navbar header_navbar navbar-fixed-top">
 			<div class="container navbar_block">
 				<div class="row">
 					<div class="col-lg-2">
-						<button type="button" class="btn navbar_btn" data-toggle="collapse" data-target="#navbar_menu">
+						<button type="button" class="btn navbar_btn" data-toggle="collapse" data-target="#header_topmenu">
 							<img src="img/menu-icon.png" alt="">
 						</button>
+						<div id="header_topmenu" class="panel-collapse collapse header_topmenu">
+							<ul class="list-group topmenu">
+								<li class="list-group-item topmenu_list"><a href="#zdarma" class="topmenu_link">zdarma</a></li>
+								<li class="list-group-item topmenu_list"><a href="#deal" class="topmenu_link">deal</a></li>
+								<li class="list-group-item topmenu_list"><a href="#menu" class="topmenu_link">menu</a></li>
+								<li class="list-group-item topmenu_list"><a href="#info" class="topmenu_link">info</a></li>
+								<li class="list-group-item topmenu_list"><a href="#contacts" class="topmenu_link">contacts</a></li>
+							</ul>
+						</div>
 					</div>
 					<div class="col-lg-4 navbar_col">
-						<a href="#" class="nav_link nav_link-left">O burgrech</a>
-						<a href="#" class="nav_link nav_link-right">Nabídka</a>
+						<a href="#deal" class="nav_link nav_link-left">O burgrech</a>
+						<a href="#info" class="nav_link nav_link-right">Nabídka</a>
 					</div>
 					<div class="col-lg-2 mainlogo">
 						<img src="img/main_logo.png" alt="" class="mainlogo_img">
 					</div>
 					<div class="col-lg-4 navbar_col">
-						<a href="#" class="nav_link nav_link-left">Objednávka</a>
-						<a href="#" class="nav_link nav_link-right">Kontakt</a>
+						<a href="#zdarma" class="nav_link nav_link-left">Objednávka</a>
+						<a href="#contacts" class="nav_link nav_link-right">Kontakt</a>
 					</div>
 				</div>
 			</div>
@@ -76,7 +85,7 @@
 		</div><!-- header_block END -->
 	</div><!-- header END -->
 	<!-- zdarma -->
-	<div class="container-fluid zdarma">
+	<div id="zdarma" class="container-fluid zdarma">
 		<!-- zdarma_block -->
 		<div class="container zdarma_block">
 			<h2 class="block_title zdarma_title">Ke každému burgeru hranolky a pití ZDARMA</h2>
@@ -100,7 +109,7 @@
 		</div><!-- zdarma_block END -->
 	</div><!-- zdarma END -->
 	<!-- deal -->
-	<div class="container-fluid deal">
+	<div id="deal" class="container-fluid deal">
 		<!-- deal_block -->
 		<div class="container deal_block">
 			<!-- deal_offer -->
@@ -114,7 +123,7 @@
 		</div><!-- deal_block END -->
 	</div><!-- deal END -->
 	<!-- menu -->
-	<div class="container-fluid menu">
+	<div id="menu" class="container-fluid menu">
 		<!-- menu_block -->
 		<div class="container menu_block">
 			<div class="row">
@@ -125,7 +134,7 @@
 		</div><!-- menu_block END -->
 	</div><!-- menu END -->
 	<!-- info -->
-	<div class="container-fluid info">
+	<div id="info" class="container-fluid info">
 		<!-- info_top -->
 		<div class="container info_top">
 			<div class="row">
@@ -148,17 +157,32 @@
 		</div>
 	</div><!-- info END -->
 	<!-- map -->
-	<div class="container-fluid map">
+	<div id="contacts" class="container-fluid map contacts">
+		<button type="button" class="btn map_btn" data-toggle="modal" data-target="#popup">otevřete kontaktní údaje</button>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10243.96373644238!2d14.429517121870914!3d50.067731428985226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b947d51a62647%3A0x63fdae91a7f8a58c!2zQsSbbGVocmFkc2vDoSA4NTgvMjMsIDEyMCAwMCBQcmFoYSAyLVZpbm9ocmFkeSwg0KfQtdGF0LjRjw!5e0!3m2!1sru!2sru!4v1508614967063" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<!-- popup -->
+    <div class="modal fade popup contacts_popup" id="popup" tabindex="-1" role="dialog" aria-labelledby="popup-label" aria-hidden="true">
+			<!-- popup_dialog -->
+			<div class="modal-dialog popup_dialog" role="document">
+				<!-- popup_content -->
+				<div class="modal-content popup_content">
+					<img src="img/main_logo.png" alt="prague burger" class="popup_logo">
+					<p class="popup_text popup_adress">ADRESA: <span class="popup_adress-date">Bělehradská 858/23</span> </p>
+					<p class="popup_text popup_reservation">OBJEDNÁVKY A REZERVACE</p>
+					<p class="popup_text popup_phone">+420 605 333 545</p>
+				</div><!-- popup_content END -->
+			</div><!-- popup_dialog END -->
+		</div><!-- popup END -->
 	</div><!-- map END -->
-	<div class="container-fluid footer">
+	<div id="footer" class="container-fluid footer">
 		<div class="container footer_block">
 			<div class="row">
 				<div class="col-lg-6">
 					<p class="copyright">všechna práva vyhrazena</p>
 				</div>
 				<div class="col-lg-6">
-					<p class="aneboo">vytvořeno službou <a href="https://www.aneboo.cz" class="aneboo_link">Aneboo.cz</a></p>
+					<!-- <a href="https://www.aneboo.cz" class="aneboo_link">vytvořeno službou<i class="aneboo_logo"></i></a> -->
+					<a href="https://www.aneboo.cz" class="aneboo">vytvořeno službou <img src="img/aneboo_logo-black.svg" alt="aneboo" class="aneboo_logo">	 </a>
 				</div>
 			</div>
 		</div>
