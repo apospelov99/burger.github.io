@@ -46,38 +46,53 @@
 			<div class="container navbar_block">
 				<div class="row">
 					<div class="col-lg-2">
-						<button type="button" class="btn navbar_btn" data-toggle="collapse" data-target="#header_topmenu">
-							<img src="img/menu-icon.png" alt="">
+						<button type="button" class="btn navbar_btn" data-target="#header_topmenu" data-toggle="modal">
+							<img class="btn_iconmenu" src="img/menu-icon.png" alt="">
 						</button>
-						<div id="header_topmenu" class="panel-collapse collapse header_topmenu">
-							<ul class="list-group topmenu">
-								<li class="list-group-item topmenu_list"><a href="#zdarma" class="topmenu_link">zdarma</a></li>
-								<li class="list-group-item topmenu_list"><a href="#deal" class="topmenu_link">deal</a></li>
-								<li class="list-group-item topmenu_list"><a href="#menu" class="topmenu_link">menu</a></li>
-								<li class="list-group-item topmenu_list"><a href="#info" class="topmenu_link">info</a></li>
-								<li class="list-group-item topmenu_list"><a href="#contacts" class="topmenu_link">contacts</a></li>
-							</ul>
-						</div>
 					</div>
-					<!--
-					<div class="col-lg-4 navbar_col">
-						<a href="#deal" class="nav_link nav_link-left">O burgrech</a>
-						<a href="#info" class="nav_link nav_link-right">Nabídka</a>
-					</div>
-					-->
 					<div class="col-lg-offset-2 col-lg-4 mainlogo">
 						<img src="img/main_logo.png" alt="" class="mainlogo_img">
 					</div>
-					
-					<!--
-					<div class="col-lg-4 navbar_col">
-						<a href="#zdarma" class="nav_link nav_link-left">Objednávka</a>
-						<a href="#contacts" class="nav_link nav_link-right">Kontakt</a>
+					<div class="col-lg-offset-3 col-lg-1 facebook">
+						<a href="https://facebook.com/" class="facebook_link"><img src="img/facebook.png" alt="" class="facebook_img"></a>
 					</div>
-					-->
 				</div>
 			</div>
 		</nav><!-- header_navbar END -->
+		<!-- popup -->
+		<div class="modal fade popup header_topmenu" id="header_topmenu" tabindex="-1" role="dialog" aria-labelledby="popup-label" aria-hidden="true">
+			<!-- popup_dialog -->
+			<div class="modal-dialog popup_dialog" role="document">
+				<!-- popup_content -->
+				<div class="row">
+					<div class="col-lg-1 popup_close-col">
+						<button type="button" class="btn close popup_close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>						
+					</div>
+					<div class="col-lg-10">
+						<h2 class="topmenu_title">Menu</h2>
+						<ul class="list-group topmenu">
+							<li class="list-group-item topmenu_list"><a href="#deal" class="topmenu_link">O burgrech</a></li>
+							<li class="list-group-item topmenu_list"><a href="#zdarma" class="topmenu_link">Nabídka</a></li>
+							<li class="list-group-item topmenu_list"><a href="#menu" class="topmenu_link">Objednávka</a></li>
+							<li class="list-group-item topmenu_list"><a href="#contacts" class="topmenu_link">Kontakt</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-offset-1 col-lg-4">
+						<img src="img/adress_icon.png" alt="" class="adress_img">
+						<p class="adress_text">Bělehradská 858/23</p>
+					</div>
+					<div class="col-lg-4">
+						<img src="img/phone-call.png" alt="" class="adress_img adress_img-phone">
+						<a href="tel:+420605333545" class="adress_text adress_text-link">+420 605 333 545</a>
+					</div>
+					<div class="col-lg-offset-1 col-lg-1">
+						<a href="https://facebook.com/" class="facebook_link"><img src="img/facebook.png" alt="" class="facebook_img facebook_img-popup"></a>
+					</div>
+				</div>
+			</div><!-- popup_dialog END -->
+		</div><!-- popup END -->
 		<!-- header_block -->
 		<div class="container header_block">
 			<p class="cornertext">Ochutnej</p>
@@ -163,14 +178,14 @@
 	</div><!-- info END -->
 	<!-- map -->
 	<div id="contacts" class="container-fluid map contacts">
-		<button type="button" class="btn map_btn" data-toggle="modal" data-target="#popup">otevřete kontaktní údaje</button>
+		<button type="button" class="btn map_btn" data-toggle="modal" data-target="#popup_footer">otevřete kontaktní údaje</button>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10243.96373644238!2d14.429517121870914!3d50.067731428985226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b947d51a62647%3A0x63fdae91a7f8a58c!2zQsSbbGVocmFkc2vDoSA4NTgvMjMsIDEyMCAwMCBQcmFoYSAyLVZpbm9ocmFkeSwg0KfQtdGF0LjRjw!5e0!3m2!1sru!2sru!4v1508614967063" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 		<!-- popup -->
-    <div class="modal fade popup contacts_popup" id="popup" tabindex="-1" role="dialog" aria-labelledby="popup-label" aria-hidden="true">
+    <div class="modal fade popup contacts_popup" id="popup_footer" tabindex="-1" role="dialog" aria-labelledby="popup-label" aria-hidden="true">
 			<!-- popup_dialog -->
-			<div class="modal-dialog popup_dialog" role="document">
+			<div class="modal-dialog popup_dialog-footer" role="document">
 				<!-- popup_content -->
-				<div class="modal-content popup_content">
+				<div class="modal-content popup_content-footer">
 					<img src="img/main_logo.png" alt="prague burger" class="popup_logo">
 					<p class="popup_text popup_adress">ADRESA: <span class="popup_adress-date">Bělehradská 858/23</span> </p>
 					<p class="popup_text popup_reservation">OBJEDNÁVKY A REZERVACE</p>
